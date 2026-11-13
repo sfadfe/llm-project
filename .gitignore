@@ -1,0 +1,8 @@
+.venv/
+data/
+model/
+hang/
+__pycache__/
+*.pyc
+*.log
+*.pid

@@ -1,0 +1,28 @@
+[init]
+run = ""
+ckpt = "latest.pt"
+
+[rl]
+prompts = "data/sft/rl_prompts.jsonl"
+seed = 0
+max_prompt = 384
+eval_prompts = 256
+prompts_per_step = 32
+group = 8
+max_new = 320
+temperature = 1.0
+steps = 400
+kl_beta = 0.02
+token_budget = 16384
+eval_every = 50
+
+[train]
+run_name = "hyb200m_rl"
+lr = 3e-6
+warmup_steps = 10
+weight_decay = 0.0
+beta1 = 0.9
+beta2 = 0.99
+grad_clip = 1.0
+save_every = 10
+keep_every = 100
